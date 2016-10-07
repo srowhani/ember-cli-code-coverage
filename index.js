@@ -196,10 +196,6 @@ module.exports = {
       relativePath = relativePath.replace(name + '/', '');
     }
 
-    if (relativePath.indexOf('dummy/') === 0) {
-      relativePath = relativePath.replace('dummy/', '');
-    }
-
     var fileExists = (
       this._doesFileExistInDummyApp(relativePath) ||
       this._doesFileExistInCurrentProjectApp(relativePath) ||
